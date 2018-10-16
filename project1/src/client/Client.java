@@ -81,7 +81,7 @@ public class Client {
                     GregorianCalendar from = getDate("start");
                     GregorianCalendar to = getDate("end");
                     String desc;
-
+					System.out.print("Title: ");
                     desc = scanner.next();
 
                     int id = stub.addSchedule(from, to, desc);
