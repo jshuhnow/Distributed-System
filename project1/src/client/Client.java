@@ -61,7 +61,7 @@ public class Client {
                 gc.get(Calendar.YEAR),
                 gc.get(Calendar.MONTH) +1,
                 gc.get(Calendar.DATE),
-                gc.get(Calendar.HOUR),
+                gc.get(Calendar.HOUR_OF_DAY),
                 gc.get(Calendar.MINUTE));
 
     }
@@ -81,7 +81,7 @@ public class Client {
                     GregorianCalendar from = getDate("start");
                     GregorianCalendar to = getDate("end");
                     String desc;
-
+					System.out.print("Title: ");
                     desc = scanner.next();
 
                     int id = stub.addSchedule(from, to, desc);
