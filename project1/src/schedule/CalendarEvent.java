@@ -1,8 +1,9 @@
 package schedule;
 
+import java.io.Serializable;
 import java.util.GregorianCalendar;
 
-public class CalendarEvent {
+public class CalendarEvent implements Serializable {
     private final GregorianCalendar from, to;
     private final String desc;
     private final int id;

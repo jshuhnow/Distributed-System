@@ -24,7 +24,7 @@ public class Server implements CalendarService {
 
             // Bind the remote object's stub in the registry
             Registry registry = LocateRegistry.getRegistry();
-            registry.bind("schedule", stub);
+            registry.bind("CalendarService", stub);
 
             System.err.println("Server ready");
         } catch (Exception e) {
@@ -67,6 +67,7 @@ public class Server implements CalendarService {
                 res.add(event);
             }
         }
+
         return res;
     }
 }
