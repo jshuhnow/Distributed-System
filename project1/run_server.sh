@@ -1,4 +1,6 @@
 #!/bin/bash
+cd build
 rmiregistry &
+sleep 1
 java server.Server &
-java client.Client 
+cd ..
