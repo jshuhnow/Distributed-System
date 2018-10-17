@@ -92,6 +92,7 @@ public class Client {
                     }
 
                 } else if (code == 2) {
+					System.out.print("ID: ");
                     int id = scanner.nextInt();
                     stub.deleteSchedule(id);
                 } else if (code == 3) {
