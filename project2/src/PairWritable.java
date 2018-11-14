@@ -1,32 +1,38 @@
-package com.jaeseok;
+
+import java.io.IOException;
+import java.util.StringTokenizer;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.DoubleWritable;
+import org.apache.hadoop.io.Text;
 
 import java.io.DataInput;
 import java.io.DataOutput;
-import java.io.IOException;
-import org.apache.hadoop.io.IntWritable;
-import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.Writable;
 import org.apache.hadoop.io.WritableComparable;
 
 
-public class PairWritable<L extends WritableComparable, R extends WritableComparable> implements WritableComparable<PairWritable> {
-	private L first;
-	private R second;
-	public PairWritable() {}	
-	public PairWritable(PairWritable<L, R> p){
-		this.first = p.getFirst();
-		this.second = p.getSecond();
+class PairWritable implements WritableComparable<PairWritable> {
+	private DoubleWritable first;
+	private IntWritable second;
+	public PairWritable() {
+		this.first = new DoubleWritable();
+		this.second = new IntWritable();
 	}
-	public L getFirst() {
+	public PairWritable(DoubleWritable l, IntWritable r){
+		this.first = l;
+		this.second = r;
+	}
+	public DoubleWritable getFirst() {
 		return first;
 	}
-	public R getSecond(){
+	public IntWritable getSecond(){
 		return second;
 	}
-	public void setFirst(L _first) {
+	public void setFirst(DoubleWritable _first) {
 		first = _first;
 	}
-	public void setSecond(R _second) {
+	public void setSecond(IntWritable _second) {
 		second = _second;
 	}
 
@@ -49,25 +55,26 @@ public class PairWritable<L extends WritableComparable, R extends WritableCompar
 		}
 		return ((Comparable) second).compareTo((Comparable) other.second);
 	}
-	
+
 	@Override
 	public int hashCode() {
 		return first.hashCode() * 37 + second.hashCode();
 	}
-	
+
 	@Override
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public boolean equals(Object o) {
 		if (o instanceof PairWritable){
-			PairWritable<L, R> pair = (PairWritable<L, R>)o;
+			PairWritable pair = (PairWritable)o;
 			return first.equals(pair.first) && second.equals(pair.second);
 		}
 		return false;
 	}
-	
+
 	@Override
 	public String toString(){
 		return first.toString() + "," + second.toString();
 	}
-	
+
 }
+
