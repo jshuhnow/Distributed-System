@@ -51,7 +51,7 @@ public class AverageRating {
     }
   }
 
-  public static class IntSumReducer
+  public static class AverageReducer
    extends Reducer<Text,PairWritable, Text, DoubleWritable> {
 	private DoubleWritable avg = new DoubleWritable();
 
@@ -74,9 +74,7 @@ public class AverageRating {
     job.setJarByClass(AverageRating.class);
     job.setMapperClass(TokenizerMapper.class);
 
-    //job.setCombinerClass(IntSumReducer.class);
-    job.setReducerClass(IntSumReducer.class);
-
+    job.setReducerClass(AverageReducer.class);
 	job.setMapOutputKeyClass(Text.class);
 	job.setMapOutputValueClass(PairWritable.class);
     job.setOutputKeyClass(Text.class);
