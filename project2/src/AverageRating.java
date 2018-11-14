@@ -1,3 +1,5 @@
+package com.jaeseok;
+
 import java.io.IOException;
 import java.util.StringTokenizer;
 
@@ -54,7 +56,7 @@ public class AverageRating {
 
   public static void main(String[] args) throws Exception {
     Configuration conf = new Configuration();
-    Job job = Job.getInstance(conf, "Average Counting");
+    Job job = Job.getInstance(conf, "AverageMapping");
     job.setJarByClass(AverageRating.class);
     job.setMapperClass(TokenizerMapper.class);
     job.setCombinerClass(IntSumReducer.class);
