@@ -4,10 +4,12 @@ jaeseok@hanyang.ac.kr
 
 
 ### Environment
+```
 Ubuntu 18.04 LTS 64bit  
-Google Chrome Version 70.0.3538.110 (Official Build) (64-bit)
-Ethereum Browser Extension Version 5.2.2
-Solidity Version 0.4.24
+Google Chrome Version 70.0.3538.110 (Official Build) (64-bit)  
+Ethereum Browser Extension Version 5.2.2  
+Solidity Version 0.4.24  
+```
 
 ### Data Structure
 
