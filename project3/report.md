@@ -1,4 +1,4 @@
-## Distributed Computing - Assignment 1
+## Distributed Computing - Assignment 3
 Jaeseok Huh, 2015005241, Department of Computer Science and Engineering  
 jaeseok@hanyang.ac.kr
 
@@ -174,7 +174,6 @@ function startApp() {
 
 1) *web3.eth.getBalance(address \[, defaultBlock\] \[, callback\])*  
 Get the balance of an address at a given block.
-
 In our source code, the *defaultBlock* is not specified, meaning that the default block set with *web3.eth.defaultBlock* will replace.  
 
 2) *web3.fromWei(number \[, unit\])*  
