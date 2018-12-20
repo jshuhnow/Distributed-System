@@ -150,7 +150,7 @@ window.web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
 startApp();
 ```
 
-*When a user loads a webpage, MetaMask automatically injects an Ethereum provider and a Web3 instance for the webpage to use. This allows dapps to access the blockchain, propose transactions, and read their users’ account addresses.* [Metamask Medium](https://medium.com/metamask/https-medium-com-metamask-breaking-change-injecting-web3-7722797916a8) Let's move on to the *startApp()*.
+*When a user loads a webpage, MetaMask automatically injects an Ethereum provider and a Web3 instance for the webpage to use. This allows dapps to access the blockchain, propose transactions, and read their users’ account addresses.* [\(Metamask Medium\)](https://medium.com/metamask/https-medium-com-metamask-breaking-change-injecting-web3-7722797916a8) Let's move on to the *startApp()*.
 
 #### startApp()
 
@@ -168,9 +168,9 @@ function startApp() {
 }
 ```
 
-*The Contract Application Binary Interface (ABI) is the standard way to interact with contracts in the Ethereum ecosystem, both from outside the blockchain and for contract-to-contract interaction. Data is encoded according to its type, as described in [the] specification. The encoding is not self describing and thus requires a schema in order to decode.*[Solidity Docs](https://solidity.readthedocs.io/en/develop/abi-spec.html) The variable *abi* is extracted from the [Remix](https://remix.ethereum.org/), a Solidity IDE, after compiling. The two variable of the top serve as the references to the solidity backend.  
+*The Contract Application Binary Interface (ABI) is the standard way to interact with contracts in the Ethereum ecosystem, both from outside the blockchain and for contract-to-contract interaction. Data is encoded according to its type, as described in [the] specification. The encoding is not self describing and thus requires a schema in order to decode.*[\(Solidity Docs\)](https://solidity.readthedocs.io/en/develop/abi-spec.html) The variable *abi* is extracted from the [Remix](https://remix.ethereum.org/), a Solidity IDE, after compiling. The two variable of the top serve as the references to the solidity backend.  
 
-*The web3-eth package allows you to interact with an Ethereum blockchain and Ethereum smart contracts.*[Web3.js Docs](https://web3js.readthedocs.io/en/1.0/web3-eth.html) The method *getAccounts* takes a callback function so that the result can be shown in the HTML as above.  
+*The web3-eth package allows you to interact with an Ethereum blockchain and Ethereum smart contracts.*[\(Web3.js Docs\)](https://web3js.readthedocs.io/en/1.0/web3-eth.html) The method *getAccounts* takes a callback function so that the result can be shown in the HTML as above.  
 
 1) *web3.eth.getBalance(address \[, defaultBlock\] \[, callback\])*  
 Get the balance of an address at a given block.
