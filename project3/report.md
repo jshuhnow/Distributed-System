@@ -134,7 +134,7 @@ The functions above returns the unit token price and the token bought by the acc
 ### The linkage with [*Web3.js*](https://web3js.readthedocs.io/en/1.0/getting-started.html) Library
 The [*web3.js*](https://web3js.readthedocs.io/en/1.0/getting-started.html) library is a collection of modules which contain specific functionality for the ethereum ecosystem.
 
-#### 1. Add an EventListener
+#### Add an EventListener
 
 ```
 // Checking if Web3 has been injected by the browser (Mist/MetaMask)
@@ -172,14 +172,14 @@ function startApp() {
 
 *The web3-eth package allows you to interact with an Ethereum blockchain and Ethereum smart contracts.*[Web3.js Docs](https://web3js.readthedocs.io/en/1.0/web3-eth.html) The method *getAccounts* takes a callback function so that the result can be shown in the HTML as above.  
 
-1) web3.eth.getBalance(address \[, defaultBlock\] \[, callback\])
+1) *web3.eth.getBalance(address \[, defaultBlock\] \[, callback\])*  
 Get the balance of an address at a given block.
 
 In our source code, the *defaultBlock* is not specified, meaning that the default block set with *web3.eth.defaultBlock* will replace.  
 
-2) web3.fromWei(number \[, unit\])
+2) *web3.fromWei(number \[, unit\])*  
 Since the *Ethereum* does not support the floating type, it should be converted to *uint* type. The function converts any *wei* value into another unit. In our case, *unit* is not specified, thus it is converted into *ether* unit as default.  
 
-3) web3.toWei(number \[, unit\])
+3) *web3.toWei(number \[, unit\])*  
 Likewise, it converts to *wei*. The *unit* is *ether* unless specified.
 
